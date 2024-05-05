@@ -4,7 +4,8 @@
 在 OpenWrt 下实现一键合并广告拦截规则以及其他加速规则至 hosts 文件，并自动重启 OpenClash 和 Dnsmasq，无需套娃其他插件即可利用 Dnsmasq 实现去广告以及 DNS 加速功能  
 可配合系统计划任务实现每日自动更新  
 目前脚本采用[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)以及 [GitHub520](https://github.com/TG-Twilight/AWAvenue-Ads-Rule) 加速规则  
-脚本可以自动清除旧规则再合并新规则，不会出现重复添加的情况，请放心食用  
+脚本运行时会自动清除旧规则再合并新规则，不会出现重复添加的情况，请放心食用
+已在 ImmortalWrt 和 LEDE 下通过测试  
 
 ## 使用方法  
 ### 1.一键安装  
