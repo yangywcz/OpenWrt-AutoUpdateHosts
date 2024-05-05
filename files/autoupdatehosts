@@ -1,0 +1,46 @@
+#!/bin/ash
+
+# Hosts 自动合并脚本
+
+echo "开始更新合并 hosts 文件..."
+
+# 删除之前的 AWAvenue-Ads-Rule 条目
+echo "删除之前的 AWAvenue-Ads-Rule 条目..."
+sed -i '/# AWAvenue-Ads-Rule Start/,/# AWAvenue-Ads-Rule End/d' /etc/hosts
+
+# 下载 AWAvenue-Ads-Rule 的 hosts 文件，并添加起始和结束标记
+# 删除其中的 "127.0.0.1 localhost" 和 "::1 localhost" 条目
+echo "下载并合并 AWAvenue-Ads-Rule 的 hosts 文件..."
+curl https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-hosts.txt | \
+    sed '/127.0.0.1 localhost/d; /::1 localhost/d; 1s/^/# AWAvenue-Ads-Rule Start\n/; $s/$/\n# AWAvenue-Ads-Rule End/' >> /etc/hosts
+
+# 删除空行
+echo "删除空行..."
+sed -i '/^$/d' /etc/hosts
+
+# 删除之前的 GitHub520 Host 条目
+echo "删除之前的 GitHub520 Host 条目..."
+sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
+
+# 下载 GitHub520 Host 的 hosts 文件
+echo "下载并合并 GitHub520 Host 的 hosts 文件..."
+curl https://raw.hellogithub.com/hosts >> /etc/hosts
+
+# 删除空行和以 < 开头的行
+echo "删除空行和以 < 开头的行..."
+sed -i -e '/^$/d' -e '/^</d' /etc/hosts
+
+echo "hosts 文件更新合并完成！"
+
+# 检查是否存在 OpenClash 的启动脚本
+if [ -f "/etc/init.d/openclash" ]; then
+    # 如果存在 OpenClash 的启动脚本，则重启 OpenClash
+    echo "检测到 OpenClash 存在，正在重启 OpenClash..."
+    /etc/init.d/openclash restart
+    echo "已重启 OpenClash，会自动附带重启 Dnsmasq，Hosts 已生效！"
+else
+    # 如果不存在 OpenClash 的启动脚本，则直接重启 dnsmasq
+    echo "未检测到 OpenClash，正在直接重启 Dnsmasq..."
+    /etc/init.d/dnsmasq restart
+    echo "已重启 Dnsmasq，Hosts 已生效！"
+fi
