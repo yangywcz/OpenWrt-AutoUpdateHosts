@@ -16,7 +16,7 @@ SSH 登录 OpenWrt，运行以下命令
 ```bash
 curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
 ```
-脚本会自动下载至/etc目录下，并立即更新一次 hosts 文件，且会在计划任务中设置每日凌晨 4:30 分自动更新合并hosts文件  
+脚本会自动下载至/etc目录下，并立即更新一次 hosts 文件，且会在计划任务中设置每日凌晨 4:30 分自动更新合并最新的hosts文件  
 
 ### 2.手动安装  
 下载本项目的脚本，下载地址：  
