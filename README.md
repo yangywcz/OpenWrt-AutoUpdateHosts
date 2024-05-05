@@ -14,7 +14,10 @@ https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/file
 
 2.一键安装  
 SSH 登录 OpenWrt  
+```bash
 curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
+```
+  
   
 每日自动更新时间默认为凌晨4时30分  
 ## 感谢  
