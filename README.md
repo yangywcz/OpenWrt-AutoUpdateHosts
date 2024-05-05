@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/file
 下载本项目的脚本文件，放置于你想放置的目录，如/etc目录下  
 赋予脚本相应的权限，运行即可。可在计划任务中自行添加定时循环运行  
 2.一键安装  
-SSH 登录 OpenWrt
+SSH 登录 OpenWrt  
 curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
   
 
