@@ -7,14 +7,14 @@
 脚本可以自动清除旧规则再合并新规则，不会出现重复添加的情况，请放心食用  
 
 ## 使用方法  
-1.一键安装  
+###1.一键安装  
 SSH 登录 OpenWrt，运行以下命令  
 ```bash
 curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
 ```
 脚本会自动下载至/etc目录下，并立即更新一次 hosts 文件，且会在计划任务中设置每日凌晨 4:30 分自动更新合并hosts文件  
 
-2.手动安装  
+###2.手动安装  
 下载本项目的脚本，下载地址：  
 https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/files/autoupdatehosts  
 下载本项目的脚本文件，放置于你想放置的目录，如/etc目录下  
