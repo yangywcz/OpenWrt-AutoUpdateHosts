@@ -1,5 +1,7 @@
 #!/bin/ash
 
+# AutoUpdateHosts 一键安装脚本
+
 # 定义远程脚本文件的 URL
 SCRIPT_URL="https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/files/autoupdatehosts"
 # 定义本地脚本文件的目标路径
@@ -20,7 +22,7 @@ echo "赋予脚本文件权限..."
 chmod +x "$SCRIPT_PATH"
 
 # 修改 dnsmasq 配置文件取消忽略 hosts 文件的设置，删除包含 "option nohosts" 的行
-echo "修改 dnsmasq 配置文件，取消忽略 hosts 文件"
+echo "修改 dnsmasq 配置文件，取消忽略 hosts 文件..."
 sed -i '/option nohosts/d' "$DNSMASQ_CONF"
 
 # 添加定时任务
