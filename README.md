@@ -11,6 +11,8 @@
 只需要 OpenClash 一个插件，无需套娃任何其他插件，即可实现效果完美的分流科学上网，且 DNS 解析无污染无泄漏泄露，国内域名自动绕过内核，可与本项目一起使用 
 
 ## 使用方法  
+首先设置 Dnsmasq 不要忽略 hosts 文件  
+![](https://github.com/Aethersailor/OpenWrt-AutoUpdateHosts/blob/main/doc/pics/hosts.png)
 ### 1.一键安装  
 SSH 登录 OpenWrt，运行以下命令  
 ```bash
