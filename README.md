@@ -18,7 +18,6 @@ curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts
 ```
 脚本会自动改写 dnsmasq 设置，取消忽略 hosts 的选项，并下载更新脚本 autoupdatehosts 至 /etc 目录下，然后立即更新一次 hosts 文件，且会在计划任务中设置每日凌晨 4:30 分自动更新合并最新的hosts文件。  
 若检测到安装了 OpenClash 则会自动重启 OpenClash(OpenClash 会重启 Dnsmasq)，若未安装 OpenClash 则会直接重启 Dnsmasq 使 hosts 文件生效。  
-
 ## 感谢  
 - [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)  
 - [521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)  
