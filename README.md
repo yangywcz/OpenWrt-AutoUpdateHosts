@@ -11,20 +11,13 @@
 只需要 OpenClash 一个插件，无需套娃任何其他插件，即可实现效果完美的分流科学上网，且 DNS 解析无污染无泄漏泄露，国内域名自动绕过内核，可与本项目一起使用 
 
 ## 使用方法  
-### 1.一键安装  
+### 一键安装  
 SSH 登录 OpenWrt，运行以下命令  
 ```bash
 curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
 ```
-脚本会自动下载至 /etc 目录下，并立即更新一次 hosts 文件，且会在计划任务中设置每日凌晨 4:30 分自动更新合并最新的hosts文件。  
+脚本会自动改写 dnsmasq 设置，取消忽略 hosts 的选项，并下载更新脚本 autoupdatehosts 至 /etc 目录下，然后立即更新一次 hosts 文件，且会在计划任务中设置每日凌晨 4:30 分自动更新合并最新的hosts文件。  
 若检测到安装了 OpenClash 则会自动重启 OpenClash(OpenClash 会重启 Dnsmasq)，若未安装 OpenClash 则会直接重启 Dnsmasq 使 hosts 文件生效。  
-
-### 2.手动安装  
-下载本项目的脚本，下载地址：  
-https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/files/autoupdatehosts  
-下载本项目的脚本文件，放置于你想放置的目录，如/etc目录下  
-赋予脚本相应的权限，运行即可。可在计划任务中自行添加定时循环运行  
-
 
 ## 感谢  
 - [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)  

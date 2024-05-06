@@ -37,7 +37,7 @@ if [ -f "/etc/init.d/openclash" ]; then
     # 如果存在 OpenClash 的启动脚本，则重启 OpenClash
     echo "检测到 OpenClash 存在，正在重启 OpenClash..."
     /etc/init.d/openclash restart
-    echo "已重启 OpenClash，会自动附带重启 Dnsmasq，Hosts 已生效！"
+    echo "已重启 OpenClash 和 Dnsmasq，Hosts 已生效！"
 else
     # 如果不存在 OpenClash 的启动脚本，则直接重启 dnsmasq
     echo "未检测到 OpenClash，正在直接重启 Dnsmasq..."
