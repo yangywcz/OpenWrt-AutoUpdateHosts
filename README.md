@@ -21,7 +21,7 @@ curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts
 3. 在计划任务中设置每日凌晨 4:30 分运行更新脚本；  
 4. 运行一次更新脚本。  
 
-**更新脚本每次运行时，会先清除 hosts 文件内上次添加的规则，再合并新规则，不会破坏 hosts文件内的原始内容以及人为手动添加的其他内容，请放心食用**
+**更新脚本每次运行时，会先清除 hosts 文件内上次添加的规则，再合并新规则，不会破坏 hosts 文件内的原始内容以及人为手动添加的其他内容，请放心食用**
 
 更新脚本每次运行完后，会自动重启 Dnsmasq，若检测到安装了 OpenClash 则会自动重启 OpenClash（OpenClash 会重启 Dnsmasq），若未安装 OpenClash 则会直接重启 Dnsmasq 使 hosts 文件生效。  
 ## 感谢  
