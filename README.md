@@ -22,7 +22,8 @@ curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts
 4. 运行一次更新脚本。  
 
 **更新脚本每次运行时，会先自动清除 hosts 文件内上次添加的旧规则，然后才会并新规则，不会重复添加**  
-脚本不会破坏 hosts 文件内的原始内容以及人为手动添加的其他内容，请放心食用。如果需要人为添加其他 hosts 条目，请勿直接添加在 hosts 文件内容的尾部，不要添加在 start 与 end 注释之间  
+**脚本不会破坏 hosts 文件内的原始内容以及人为手动添加的其他内容，请放心食用**  
+如果需要人为添加其他 hosts 条目，请勿直接添加在 hosts 文件内容的尾部，不要添加在 start 与 end 注释之间  
 
 更新脚本每次运行完后，会自动重启 Dnsmasq，若检测到安装了 OpenClash 则会自动重启 OpenClash（OpenClash 会重启 Dnsmasq），若未安装 OpenClash 则会直接重启 Dnsmasq 使 hosts 文件生效。  
 
