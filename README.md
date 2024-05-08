@@ -17,7 +17,7 @@ curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts
 ```
 一键安装脚本会依次执行以下功能：  
 1. 改写 dnsmasq 设置，取消忽略 hosts 的选项；  
-2. 下载更新脚本 autoupdatehosts 至 /etc 目录下；  
+2. 下载更新脚本 autoupdatehosts 至 /etc 目录下并赋予相应的权限；  
 3. 在计划任务中设置每日凌晨 4:30 分运行更新脚本；  
 4. 运行一次更新脚本。  
 
