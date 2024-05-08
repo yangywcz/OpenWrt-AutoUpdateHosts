@@ -16,13 +16,13 @@ SSH 登录 OpenWrt，运行以下命令
 ```bash
 curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
 ```
-一键安装脚本会依次执行以下功能：  
+一键安装脚本运行时会依次执行以下功能：  
 1. 改写 dnsmasq 设置，取消忽略 hosts 的选项  
 2. 下载更新脚本 autoupdatehosts 至 /etc 目录下并赋予相应的权限  
 3. 在计划任务中设置每日凌晨 4:30 分运行更新脚本  
 4. 运行一次更新脚本。  
 
-更新脚本会依次执行以下功能：  
+更新脚本运行时会依次执行以下功能：  
 1. 检查 hosts 文件中是否存在过去由此脚本添加的规则并清除  
 2. 下载最新的[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)以及 [GitHub520](https://github.com/521xueweihan/GitHub520) 加速规则并合并至 hosts 文件  
 3. 重启 Dnsmasq 使 hosts 文件生效  
