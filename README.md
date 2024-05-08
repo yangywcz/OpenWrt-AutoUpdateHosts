@@ -25,7 +25,7 @@ curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts
 
 更新脚本运行时会依次执行以下功能：  
 1. 检查 hosts 文件中是否存在过去由此脚本添加的规则并清除  
-2. 下载最新的[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)以及 [GitHub520](https://github.com/521xueweihan/GitHub520) 加速规则并合并至 hosts 文件  
+2. 下载最新的[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)以及 [GitHub520](https://github.com/521xueweihan/GitHub520) 加速规则并合并至 /etc/hosts 文件  
 3. 重启 Dnsmasq 使 hosts 文件生效  
 
 **脚本不会破坏 hosts 文件内的原始内容以及人为手动添加的其他内容，不会重复添加内容，请放心食用**  
