@@ -13,7 +13,7 @@
 
 ## 使用方法  
 ### 一键安装  
-SSH 登录 OpenWrt，运行以下命令  
+SSH 登录 OpenWrt，运行以下命令即可执行一键安装脚本（脚本下载链接已经过 GitHub Proxy 代理加速）  
 ```bash
 curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
 ```
