@@ -25,11 +25,19 @@ chmod +x "$SCRIPT_PATH"
 echo "修改 dnsmasq 配置文件，取消忽略 hosts 文件..."
 sed -i '/option nohosts/d' "$DNSMASQ_CONF"
 
-# 添加定时任务
-echo "添加定时任务，默认更新时间为每天4:30..."
-echo "$CRON_TIME $SCRIPT_PATH" >> /etc/crontabs/root
-echo "AutoUpdateHosts 脚本安装完成！"
+# 检查是否已经存在相同的定时任务，如果不存在则添加
+if grep -qF "$SCRIPT_PATH" /etc/crontabs/root; then
+    echo "已经存在相同的定时任务，跳过定时任务添加步骤。"
+else
+    echo "添加定时任务，默认更新时间为每天4:30..."
+    echo "$CRON_TIME $SCRIPT_PATH" >> /etc/crontabs/root
+fi
+
+# 提取定时任务的时间，并输出相应提示
+CRON_HOUR=$(echo $CRON_TIME | cut -d' ' -f2)
+CRON_MIN=$(echo $CRON_TIME | cut -d' ' -f1)
+echo "AutoUpdateHosts 脚本安装完成！脚本将在每天的 $CRON_HOUR 点 $CRON_MIN 分运行。"
 
 # 运行脚本文件一次
-echo "运行 AutoUpdateHosts 脚本文件..."
+echo "运行 AutoUpdateHosts 脚本..."
 "$SCRIPT_PATH"
