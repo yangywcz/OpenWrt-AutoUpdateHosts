@@ -15,7 +15,7 @@
 ### 一键安装  
 SSH 登录 OpenWrt，运行以下命令  
 ```bash
-curl -sSL https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
+curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/install.sh | sh
 ```
 一键安装脚本运行时会依次执行以下功能：  
 1. 改写 dnsmasq 设置，取消忽略 hosts 的选项  
