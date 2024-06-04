@@ -3,9 +3,9 @@
 # AutoUpdateHosts 一键安装脚本
 
 # 定义远程脚本文件的 URL
-SCRIPT_URL="https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/files/autoupdatehosts.sh"
+SCRIPT_URL="https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersailor/OpenWrt-AutoUpdateHosts/main/files/autoupdatehosts"
 # 定义本地脚本文件的目标路径
-SCRIPT_PATH="/etc/autoupdatehosts/autoupdatehosts.sh"
+SCRIPT_PATH="/etc/autoupdatehosts"
 # 定义计划任务的时间（每天凌晨4点30分）
 CRON_TIME="30 4 * * *"
 # 定义 dnsmasq 配置文件路径
