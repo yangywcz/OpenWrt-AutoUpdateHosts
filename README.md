@@ -37,6 +37,10 @@ curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersai
 - [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)  
 - [521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)  
 
+# License		
+[![](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/deed.zh)
+* CC-BY-SA-4.0  
+
 ## Star History
 
 <a href="https://star-history.com/#Aethersailor/OpenWrt-AutoUpdateHosts&Date">
