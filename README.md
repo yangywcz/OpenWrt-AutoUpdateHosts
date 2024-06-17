@@ -19,7 +19,7 @@ curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersai
 ```
 一键安装脚本运行时会依次执行以下功能：  
 1. 改写 dnsmasq 设置，取消忽略 hosts 的选项  
-2. 下载更新脚本 autoupdatehosts.sh 至 /etc/autoupdatehosts 目录下并赋予相应的权限  
+2. 下载更新脚本 autoupdatehosts 至 /etc/autoupdatehosts 并赋予相应的权限  
 3. 在计划任务中设置每日凌晨 4:30 分运行更新脚本  
 4. 运行一次更新脚本。  
 
