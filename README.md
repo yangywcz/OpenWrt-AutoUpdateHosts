@@ -34,6 +34,7 @@ curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/Aethersai
 更新脚本每次运行完后，若检测到安装了 OpenClash 会自动重启 OpenClash（OpenClash 会重启 Dnsmasq），若未安装 OpenClash 则会直接重启 Dnsmasq。  
 
 ## 感谢  
+以下排名不分先后  
 - [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule)  
 - [521xueweihan/GitHub520](https://github.com/521xueweihan/GitHub520)  
 
